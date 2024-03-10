@@ -6,15 +6,16 @@ class TabletLyoutListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 200,
-      child: ListView.builder(
-        itemCount: 15,
-        shrinkWrap: true,
-        scrollDirection: Axis.horizontal,
-        itemBuilder: (context, index) {
-          return const CustomGridContaienr();
-        },
+    return SliverToBoxAdapter(
+      child: SizedBox(
+        height: 200,
+        child: ListView.builder(
+          itemCount: 15,
+          scrollDirection: Axis.horizontal,
+          itemBuilder: (context, index) {
+            return const CustomGridContaienr();
+          },
+        ),
       ),
     );
   }

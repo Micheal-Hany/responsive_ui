@@ -16,26 +16,52 @@ class _MyHomePageBodyState extends State<MyHomePageBody> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        key: scaffoldKey,
-        drawer: const CustomDrawer(),
-        appBar: AppBar(
-          actions: const [],
-          leading: IconButton(
-              onPressed: () => scaffoldKey.currentState!.openDrawer(),
-              icon: const Icon(Icons.menu)),
-        ),
-        body: CustomScrollView(
-          slivers: [
-            SliverToBoxAdapter(
-              child: LayoutBuilder(builder: (context, constraints) {
-                if (constraints.maxWidth > 600) {
-                  return const TabletLyoutListView();
-                }
-                return const CustomGridView();
-              }),
-            ),
-            const CustomListView(),
-          ],
-        ));
+      key: scaffoldKey,
+      drawer: const CustomDrawer(),
+      appBar: AppBar(
+        actions: const [],
+        leading: IconButton(
+            onPressed: () => scaffoldKey.currentState!.openDrawer(),
+            icon: const Icon(Icons.menu)),
+      ),
+      body: LayoutBuilder(builder: (context, constrains) {
+        if (constrains.maxWidth > 600) {
+          return const Tabletlayout();
+        }
+        return const MobileLayout();
+      }),
+    );
+  }
+}
+
+class MobileLayout extends StatelessWidget {
+  const MobileLayout({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return const CustomScrollView(
+      slivers: [
+        CustomGridView(),
+        CustomListView(),
+      ],
+    );
+  }
+}
+
+class Tabletlayout extends StatelessWidget {
+  const Tabletlayout({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return const CustomScrollView(
+      slivers: [
+        TabletLyoutListView(),
+        CustomListView(),
+      ],
+    );
   }
 }
