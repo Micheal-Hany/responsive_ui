@@ -25,10 +25,13 @@ class _MyHomePageBodyState extends State<MyHomePageBody> {
             icon: const Icon(Icons.menu)),
       ),
       body: LayoutBuilder(builder: (context, constrains) {
-        if (constrains.maxWidth > 600) {
+        if (constrains.maxWidth < 600) {
+          return const MobileLayout();
+        }
+        if (constrains.maxWidth < 900) {
           return const Tabletlayout();
         }
-        return const MobileLayout();
+        return const DescktopLatout();
       }),
     );
   }
@@ -63,5 +66,14 @@ class Tabletlayout extends StatelessWidget {
         CustomListView(),
       ],
     );
+  }
+}
+
+class DescktopLatout extends StatelessWidget {
+  const DescktopLatout({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Placeholder();
   }
 }
