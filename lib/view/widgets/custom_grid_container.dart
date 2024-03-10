@@ -11,7 +11,7 @@ class CustomGridContaienr extends StatelessWidget {
       ),
       child: Container(
         height: MediaQuery.sizeOf(context).height * .2,
-        width: MediaQuery.sizeOf(context).width * .4,
+        width: MediaQuery.sizeOf(context).width * .2,
         decoration: BoxDecoration(
             color: Colors.red, borderRadius: BorderRadius.circular(15)),
       ),
