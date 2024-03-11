@@ -1,33 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_ui/views/dashbord_view.dart';
 
 void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: const MyHomePageBody(),
-    );
-  }
-}
-
-class MyHomePageBody extends StatelessWidget {
-  const MyHomePageBody({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Placeholder();
-  }
+  runApp(const ResponsiveDashBoard());
 }
 
 double getResponsiveFontSize(BuildContext context, {required double fontSize}) {
@@ -46,6 +21,5 @@ double getScalefactor(BuildContext context) {
   if (width < 900) {
     return width / 700;
   }
-
   return width / 1000;
 }
