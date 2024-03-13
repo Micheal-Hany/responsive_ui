@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_ui/widgets/Latest_Transaction.dart';
 import 'package:responsive_ui/widgets/custom_quick_invoice_header.dart';
 
 class CustomQuickInvoice extends StatelessWidget {
@@ -16,10 +17,11 @@ class CustomQuickInvoice extends StatelessWidget {
       ),
       child: const Column(children: [
         QuickInvoiceHeader(),
-
-
+        SizedBox(
+          height: 16,
+        ),
+        LatestTransactionSection(),
       ]),
     );
   }
 }
-
