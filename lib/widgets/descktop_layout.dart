@@ -22,6 +22,11 @@ class DescktopLayout extends StatelessWidget {
                   child: AllExpenses(),
                 ),
                 SliverToBoxAdapter(
+                  child: SizedBox(
+                    height: 24,
+                  ),
+                ),
+                SliverToBoxAdapter(
                   child: CustomQuickInvoice(),
                 )
               ],

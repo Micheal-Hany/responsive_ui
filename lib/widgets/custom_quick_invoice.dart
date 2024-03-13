@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_ui/widgets/custom_quick_invoice_header.dart';
 
 class CustomQuickInvoice extends StatelessWidget {
   const CustomQuickInvoice({super.key});
@@ -13,7 +14,9 @@ class CustomQuickInvoice extends StatelessWidget {
           borderRadius: BorderRadius.circular(12),
         ),
       ),
-      child: const Column(children: [ ]),
+      child: const Column(children: [
+        QuickInvoiceHeader(),
+      ]),
     );
   }
 }
