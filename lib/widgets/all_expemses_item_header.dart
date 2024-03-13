@@ -12,7 +12,6 @@ class AllExpensesItemHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Container(
           padding: const EdgeInsets.all(8),
@@ -29,6 +28,7 @@ class AllExpensesItemHeader extends StatelessWidget {
                 : const ColorFilter.mode(Color(0xff60BEF3), BlendMode.srcIn),
           )),
         ),
+        const Spacer(),
         Icon(
           Icons.arrow_forward_ios_rounded,
           color:

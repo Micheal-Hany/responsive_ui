@@ -4,6 +4,7 @@ import 'package:responsive_ui/views/dash_bord_home_view.dart';
 void main() {
   runApp(const ResponsiveDashBoard());
 }
+
 class ResponsiveDashBoard extends StatelessWidget {
   const ResponsiveDashBoard({super.key});
 
