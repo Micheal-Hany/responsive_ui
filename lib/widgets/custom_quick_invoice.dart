@@ -16,7 +16,10 @@ class CustomQuickInvoice extends StatelessWidget {
       ),
       child: const Column(children: [
         QuickInvoiceHeader(),
+
+
       ]),
     );
   }
 }
+
