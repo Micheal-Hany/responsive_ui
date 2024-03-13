@@ -7,10 +7,12 @@ class ResponsiveHomeViewDashBoardViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    
-    return Adavtivelayout(
-        mobileLayout: (context) => const SizedBox(),
-        tabletLayout: (context) => const SizedBox(),
-        descktoplayout: (context) => const DescktopLayout());
+    return Scaffold(
+      backgroundColor: const Color(0xffF7F9FA),
+      body: Adavtivelayout(
+          mobileLayout: (context) => const SizedBox(),
+          tabletLayout: (context) => const SizedBox(),
+          descktoplayout: (context) => const DescktopLayout()),
+    );
   }
 }
