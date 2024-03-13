@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_ui/utils/app_images.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-// 4EB7F2
 class AllExpensesItemHeader extends StatelessWidget {
   const AllExpensesItemHeader({
     super.key,
