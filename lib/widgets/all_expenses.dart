@@ -15,18 +15,13 @@ class AllExpenses extends StatelessWidget {
           borderRadius: BorderRadius.circular(12),
         ),
       ),
-      child: Column(
+      child: const Column(
         children: [
-          const AllExpensesHeader(),
-          const SizedBox(
+          AllExpensesHeader(),
+          SizedBox(
             height: 16,
           ),
-          const AllExpensesItemsListView(),
-          Container(
-            width: 400,
-            height: 50,
-            color: Colors.red,
-          )
+          AllExpensesItemsListView(),
         ],
       ),
     );
