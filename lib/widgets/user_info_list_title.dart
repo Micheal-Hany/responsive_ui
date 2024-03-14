@@ -7,23 +7,25 @@ class UserInfoListTile extends StatelessWidget {
   const UserInfoListTile({
     super.key,
     required this.userModel,
-    
   });
 
   final UserInfoModel userModel;
   @override
   Widget build(BuildContext context) {
     return Card(
+      color: Colors.grey.withOpacity(.1),
       elevation: 0,
-      child: ListTile(
-        title: Text(
-          userModel.title,
-          style: AppStyles.styleSemiBold16(context),
-        ),
-        leading: SvgPicture.asset(userModel.image),
-        subtitle: Text(
-          userModel.subtitle,
-          style: AppStyles.styleRegular12(context),
+      child: Center(
+        child: ListTile(
+          title: Text(
+            userModel.title,
+            style: AppStyles.styleSemiBold16(context),
+          ),
+          leading: SvgPicture.asset(userModel.image),
+          subtitle: Text(
+            userModel.subtitle,
+            style: AppStyles.styleRegular12(context),
+          ),
         ),
       ),
     );
