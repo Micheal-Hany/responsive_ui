@@ -35,12 +35,12 @@ class _MyCardSectionState extends State<MyCardSection> {
         borderRadius: BorderRadius.circular(12),
       ),
       child: Padding(
-        padding: const EdgeInsets.all(16),
+        padding: const EdgeInsets.only(left: 16, right: 16, top: 8),
         child: Column(
           children: [
-            const SizedBox(
-              height: 24,
-            ),
+            // const SizedBox(
+            //   height: 24,
+            // ),
             Row(
               children: [
                 Text(
@@ -51,7 +51,7 @@ class _MyCardSectionState extends State<MyCardSection> {
               ],
             ),
             const SizedBox(
-              height: 24,
+              height: 16,
             ),
             CardPageView(pageController: pageController),
             const SizedBox(

@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:responsive_ui/widgets/all_expenses.dart';
 import 'package:responsive_ui/widgets/custom_drawer.dart';
 import 'package:responsive_ui/widgets/custom_quick_invoice.dart';
+import 'package:responsive_ui/widgets/incom_section.dart';
 import 'package:responsive_ui/widgets/my_card_section.dart';
+import 'package:responsive_ui/widgets/transation_history.dart';
 
 class DescktopLayout extends StatelessWidget {
   const DescktopLayout({super.key});
@@ -37,7 +39,22 @@ class DescktopLayout extends StatelessWidget {
         ),
         Expanded(
           flex: 3,
-          child: MyCardSection(),
+          child: Column(
+            children: [
+              Expanded(flex: 7, child: MyCardSection()),
+              SizedBox(
+                height: 16,
+              ),
+              Expanded(flex: 9, child: TransactionHistory()),
+              SizedBox(
+                height: 16,
+              ),
+              Expanded(
+                flex: 5,
+                child: IncomeSection(),
+              )
+            ],
+          ),
         ),
       ],
     );
