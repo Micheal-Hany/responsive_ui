@@ -26,13 +26,7 @@ class IncomeSection extends StatelessWidget {
                 const AllExpensesDrobDown()
               ],
             ),
-            const Expanded(
-              child: Row(
-                children: [
-                  Expanded(child: IncomeChart()),
-                ],
-              ),
-            ),
+            const IncomeChart(),
           ],
         ),
       ),

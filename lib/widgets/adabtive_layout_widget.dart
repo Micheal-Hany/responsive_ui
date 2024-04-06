@@ -11,9 +11,9 @@ class Adavtivelayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
-        if (constraints.maxWidth < 600) {
+        if (constraints.maxWidth.isInRange(0,800)) {
           return mobileLayout(context);
-        } else if (constraints.maxWidth < 900) {
+        } else if (constraints.maxWidth.isInRange(800, 1200)) {
           return tabletLayout(context);
         } else {
           return descktoplayout(context);
@@ -21,4 +21,12 @@ class Adavtivelayout extends StatelessWidget {
       },
     );
   }
+ 
 }
+
+extension DoubleRangeExtension on double {
+  bool isInRange(double min, double max) {
+    return this >= min && this <= max;
+  }
+}
+

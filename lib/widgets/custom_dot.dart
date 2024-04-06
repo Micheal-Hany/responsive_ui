@@ -16,3 +16,21 @@ class CustomDotIndecator extends StatelessWidget {
     );
   }
 }
+
+class CustomDotIndecatorChart extends StatelessWidget {
+  const CustomDotIndecatorChart({
+    super.key,
+    required this.color,
+  });
+  final Color color;
+  @override
+  Widget build(BuildContext context) {
+    return AnimatedContainer(
+      duration: const Duration(milliseconds: 300),
+      decoration:
+          BoxDecoration(borderRadius: BorderRadius.circular(12), color: color),
+      height: 8,
+      width: 8,
+    );
+  }
+}

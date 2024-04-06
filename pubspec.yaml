@@ -33,6 +33,7 @@ dependencies:
     sdk: flutter
 
 dev_dependencies:
+  device_preview: ^1.1.0
   expandable_page_view: ^1.0.17
   flutter_lints: ^2.0.0
   flutter_svg: ^2.0.10+1

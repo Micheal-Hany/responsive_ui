@@ -19,24 +19,22 @@ class TransactionHistory extends StatelessWidget {
             const SizedBox(
               height: 4,
             ),
-            Row(
-              children: [
-                Text("Transaction History",
-                    style: AppStyles.styleSemiBold24(context)
-                        .copyWith(color: const Color(0xff064061))),
-                const Spacer(),
-                Text(
-                  'see all',
-                  style: AppStyles.styleSemiBold16(context)
-                      .copyWith(color: const Color(0xff4EB7F2)),
-                )
-              ],
+            ListTile(
+              title: Text(
+                "Transaction History",
+                style: AppStyles.styleSemiBold24(context)
+                    .copyWith(color: const Color(0xff064061)),
+              ),
+              trailing: Text(
+                'see all',
+                style: AppStyles.styleSemiBold16(context)
+                    .copyWith(color: const Color(0xff4EB7F2)),
+              ),
             ),
             const SizedBox(
               height: 12,
             ),
             const TransationListView(),
-            
           ],
         ),
       ),

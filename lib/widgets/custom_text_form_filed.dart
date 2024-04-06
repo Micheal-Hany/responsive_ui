@@ -34,7 +34,7 @@ class CustomTextField extends StatelessWidget {
         filled: true,
         hintText: hintText,
         hintStyle:
-            AppStyles.styleSemiBold20(context).copyWith(color: Colors.grey),
+            AppStyles.styleMedium16(context).copyWith(color: Colors.grey),
         enabledBorder: OutlineInputBorder(
           borderSide: const BorderSide(color: Colors.grey),
           borderRadius: BorderRadius.circular(10),
@@ -72,7 +72,7 @@ class LabeledTextField extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(label, style: AppStyles.styleSemiBold20(context)),
+        Text(label, style: AppStyles.styleSemiBold16(context)),
         const SizedBox(height: 8.0),
         CustomTextField(
           controller: controller,

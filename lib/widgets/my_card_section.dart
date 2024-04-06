@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:responsive_ui/utils/app_style.dart';
 import 'package:responsive_ui/widgets/card_page_view.dart';
 import 'package:responsive_ui/widgets/dots_indecator.dart';
+import 'package:responsive_ui/widgets/transation_history.dart';
 
 class MyCardSection extends StatefulWidget {
   const MyCardSection({
@@ -38,9 +39,7 @@ class _MyCardSectionState extends State<MyCardSection> {
         padding: const EdgeInsets.only(left: 16, right: 16, top: 8),
         child: Column(
           children: [
-            // const SizedBox(
-            //   height: 24,
-            // ),
+             
             Row(
               children: [
                 Text(
@@ -59,7 +58,12 @@ class _MyCardSectionState extends State<MyCardSection> {
             ),
             Dotsindecator(
               currantpagenumber: currantPageIndex,
-            )
+            ),
+            Divider(
+              height: 32,
+              color: Colors.grey.withOpacity(.4),
+            ),
+            const TransactionHistory()
           ],
         ),
       ),

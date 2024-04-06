@@ -27,7 +27,8 @@ class InActiveAllExpensesItem extends StatelessWidget {
             const SizedBox(
               height: 8,
             ),
-            AllExpensesItemHeader(image: model.image, isSelected: isSelected),
+            AllExpensesItemHeader(
+                image: model.image, isSelected: isSelected),
             const SizedBox(
               height: 16,
             ),
@@ -90,7 +91,8 @@ class ActiveAllExpensesItem extends StatelessWidget {
             const SizedBox(
               height: 8,
             ),
-            AllExpensesItemHeader(image: model.image, isSelected: isSelected),
+            AllExpensesItemHeader(
+                image: model.image, isSelected: isSelected),
             const SizedBox(
               height: 16,
             ),

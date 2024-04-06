@@ -12,6 +12,7 @@ class CustomDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: MediaQuery.sizeOf(context).width * .7,
       decoration: const BoxDecoration(color: Colors.white),
       child: CustomScrollView(
         slivers: [
@@ -51,23 +52,3 @@ class CustomDrawer extends StatelessWidget {
     );
   }
 }
-
-// SliverFillRemaining(
-//             hasScrollBody: false,
-//             child: Column(
-//               children: [
-//                 Expanded(
-//                     child: SizedBox(
-//                   height: 20,
-//                 )),
-//                 InActiveDrawerItem(
-// drawerItemModel: DrawerItemModel(
-//     title: 'Setting system', image: Assets.imagesSettings),
-//                 ),
-//                 InActiveDrawerItem(
-// drawerItemModel: DrawerItemModel(
-//     title: 'Logout account', image: Assets.imagesLogout),
-//                 ),
-//                 SizedBox(
-//                   height: 48,
-//                 )
